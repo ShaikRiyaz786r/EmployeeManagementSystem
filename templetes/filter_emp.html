@@ -7,6 +7,19 @@
 
 </head>
 <body>
-    <h1>this is filter employee page</h1>
+    <div class="container">
+        <h1>Filter employee.!</h1>
+        <form method="post">
+            {% csrf_token %}
+            <label for="fln">Employee First/Last Name</label><br>
+            <input type="text" name="fln" id="fln"><br>
+            <label for="dept">Department</label><br>
+            <input type="text" name="dept" id="dept"><br>
+            <label for="role">Role</label><br>
+            <input type="text" name="role" id="role"><br>
+            <hr>
+            <input type="submit" class="btn btn-secondary">
+        </form>
+    </div>
 </body>
 </html>
