@@ -4,8 +4,14 @@ class Department(models.Model):
     name = models.CharField(max_length = 200, null = False)
     location = models.CharField(max_length=100)
 
+    def __str__(self):
+        return "%s" %(self.name)
+
 class Role(models.Model):
     name = models.CharField(max_length=200, null=False)
+
+    def __str__(self):
+        return self.name
 
 class Employee(models.Model):
     first_name = models.CharField(max_length=100,null=False)
